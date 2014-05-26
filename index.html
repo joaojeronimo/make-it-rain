@@ -16,6 +16,11 @@
   <body>
     <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script>
+      // MEXE AQUI JOANA
+      var NTREMOCOSACAIR = 400;
+      var VELOCIDADEDOTREMOCOACAIR = 2000;
+      
+      
       function createT() {
         var el = document.createElement('img');
         el.src = 'img/t.png';
@@ -32,7 +37,7 @@
           marginTop: window.innerHeight+'px',
           opacity: 1,
           height: 'swing'
-        }, Math.random() * 4000, function () {
+        }, 2000 + Math.random() * 2000, function () {
           t.remove();
         });
       }
@@ -41,7 +46,7 @@
         setTimeout(function () {
           dropT();
           dropAgain();
-        }, Math.random() * 200);
+        }, 200 + Math.random() * NTREMOCOSACAIR);
       })();
     </script>
   </body>
